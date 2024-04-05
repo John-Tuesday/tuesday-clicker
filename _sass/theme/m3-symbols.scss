@@ -1,0 +1,42 @@
+@mixin -material-symbols($fill: null, $weight: null, $grad: null, $optical-size: null) {
+  @if not $fill {
+    $fill: 0;
+  }
+  @if not $weight {
+    font-weight: inherit;
+    $weight: 400;
+  } @else {
+    font-weight: $weight;
+  }
+  @if not $grad {
+    $grad: 0;
+  }
+  @if not $optical-size {
+    $optical-size: 24;
+  }
+  box-sizing: border-box;
+  font-style: normal;
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  font-variant-ligatures: normal;
+  direction: ltr;
+  line-height: normal;
+  font-variation-settings:
+      'FILL' $fill,
+      'wght' $weight,
+      'GRAD' $grad,
+      'opsz' $optical-size;
+}
+
+@mixin material-symbols-rounded($fill: null, $weight: null, $grad: null, $optical-size: null) {
+  @include -material-symbols($fill, $weight, $grad, $optical-size);
+  font-family: "Material Symbols Rounded";
+}
+
+.material-symbols-rounded {
+  @include material-symbols-rounded();
+}
