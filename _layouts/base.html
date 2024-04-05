@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="{{ stylesheet }}">
     {%- endfor -%}
     {%- for script in page.head.scripts -%}
-      <script src="{{ script }}" defer></script>
+      <script src="{{ script.src }}" defer></script>
     {%- endfor -%}
   </head>
 
