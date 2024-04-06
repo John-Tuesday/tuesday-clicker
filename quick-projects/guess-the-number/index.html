@@ -1,0 +1,46 @@
+---
+title: "Guess the Number"
+layout: page
+head:
+  scripts:
+    - src: "logic.js"
+  stylesheets:
+    - "style.css"
+---
+<section class="mode-configure">
+  <h3>Configure</h3>
+
+  <div class="number-bounds-form">
+    <label for="min-bound-field">Minimum</label>
+    <input type="number" id="min-bound-field" class="min-bound-field" value="1">
+    <label for="max-bound-field">Maximum</label>
+    <input type="number" id="max-bound-field" class="max-bound-field" value="100">
+  </div>
+  
+  <p>Guess limit <span class="guess-limit"></span></p>
+
+  <button type="button" class="start-play">Start</button>
+  
+</section>
+
+<section class="mode-gameover">
+  <h3 id="game-decision" class="game-decision"></h3>
+  <p>The number was <span class="secret-number"></span></p>
+</section>
+
+<section class="mode-play">
+  <h3>Remember</h3>
+
+  <p>The number is in the range [<span class="min-bound"></span>, <span class="max-bound"></span>]</p>
+  <p>Guess limit <span class="guess-limit"></span></p>
+
+  <div class="guess-form">
+    <input type="number" id="guess-field" class="guess-field">
+    <button type="button" id="submit-guess" class="submit-guess">Submit</button>
+  </div>
+
+  <p>Guesses remaining <span class="guess-remaining"></span></p>
+
+  <ul class="previous-guess-container"></ul>
+</section>
+

@@ -1,0 +1,43 @@
+---
+---
+
+* {
+  box-sizing: border-box;
+}
+
+.guess-limit, .min-bound, .max-bound, .guess-remaining {
+  font-weight: 500;
+}
+
+input:invalid {
+  background-color: red;
+}
+
+.previous-guess-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.previous-guess {
+  display: inline;
+
+  &.too-high {
+    background-color: lightblue;
+  }
+  &.too-low {
+    background-color: yellow;
+  }
+}
+
+section {
+  position: relative;
+}
+
+.game-victory {
+  background-color: green;
+}
+
+.game-loss {
+  background-color: orange;
+}
+
